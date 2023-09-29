@@ -1,5 +1,5 @@
-#ifndef Ficha_H
-#define Ficha_H
+#ifndef FICHA_H
+#define FICHA_H
 
 #include "Ficha.h"
 
