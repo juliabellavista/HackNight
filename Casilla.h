@@ -25,7 +25,7 @@ private:
     
 
 public:
-             /*     Constructoras     */
+             /*   g  Constructoras     */
 
     Casilla(int id);
 
@@ -39,7 +39,6 @@ public:
 
     	       /*     Consultoras     */
 
-<<<<<<< HEAD
     int consultar_id_Casilla() const;
 
     bool consultar_ocupada() const;
@@ -48,20 +47,6 @@ public:
 
     bool consultar_SuperPower() const;
   
-=======
-    int cid_Casilla() const;
-
-    bool cocupada() const;
-
-    int cid_Ocupant() const;
-
-    bool cSuperPower() const;
-
-
-private:
-
-    
->>>>>>> 25f4d9bf5ccfbfc2fa1f24877ba9ca668b597dd8
 };
 #endif
 

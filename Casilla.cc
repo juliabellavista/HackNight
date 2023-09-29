@@ -1,10 +1,10 @@
 #include "Casilla.h"
 
-Casilla::Casilla(int id, bool super) {
+Casilla::Casilla(int id) {
     id_Casilla = id;
     ocupada = false;
     id_Ocupant = -1;
-    SuperPower = super;
+    SuperPower = false;
 }
 
 void Casilla::modifica_ocupada() {
