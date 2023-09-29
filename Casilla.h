@@ -39,13 +39,13 @@ public:
 
     	       /*     Consultoras     */
 
-    int id_Casilla() const;
+    int cid_Casilla() const;
 
-    bool ocupada() const;
+    bool cocupada() const;
 
-    int id_Ocupant() const;
+    int cid_Ocupant() const;
 
-    bool SuperPower() const;
+    bool cSuperPower() const;
 
 
 private:
