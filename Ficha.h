@@ -22,6 +22,7 @@ private:
     };
     bool colocada;
     bool selecionada;
+    char a;
     
 
 public:
