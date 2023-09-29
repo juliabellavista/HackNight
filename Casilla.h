@@ -27,30 +27,26 @@ private:
 public:
              /*     Constructoras     */
 
-    Casilla();
+    Casilla(int id);
 
     	       /*     Modificadoras     */
 
-    void modifica_ocupada(int id_Casilla);
+    void modifica_ocupada();
 
-    void modifica_id_Ocupant(int id_Casilla,int new_id_Ocupant);
+    void modifica_id_Ocupant(int new_id_Ocupant);
 
-    void modifica_SuperPower(int id_Casilla);
+    void modifica_SuperPower();
 
     	       /*     Consultoras     */
 
-    int id_Casilla() const;
+    int consultar_id_Casilla() const;
 
-    bool ocupada() const;
+    bool consultar_ocupada() const;
 
-    int id_Ocupant() const;
+    int consultar_id_Ocupant() const;
 
-    bool SuperPower() const;
-
-
-private:
-
-    
+    bool consultar_SuperPower() const;
+  
 };
 #endif
 
