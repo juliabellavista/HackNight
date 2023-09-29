@@ -41,15 +41,15 @@ public:
 
     	       /*     Consultoras     */
 
-    int id_Ficha() const;
+    int cid_Ficha() const;
 
-    int id_Equipo() const;
+    int cid_Equipo() const;
 
-    Pos pos() const;
+    Pos cpos() const;
 
-    bool colocada() const;
+    bool ccolocada() const;
 
-    bool selecionada() const;
+    bool cselecionada() const;
 
 
 private:
