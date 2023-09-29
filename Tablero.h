@@ -12,7 +12,6 @@ using namespace std;
 class Tablero {
 
 private:
-
     int id_Tablero;
     vector<Casilla> tablero;
     int num_Fichas;

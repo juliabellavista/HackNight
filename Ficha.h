@@ -16,28 +16,25 @@ private:
     
     int id_Ficha;
     int id_Equipo;
-    struct Pos{
-        int x;
-        int y;
-    };
+    int casilla; 
     bool colocada;
-    bool selecionada;
+    bool seleccionada;
     
 
 public:
              /*     Constructoras     */
 
-    Ficha();
+    Ficha(int id, int equipo);
 
     	       /*     Modificadoras     */
 
-    void modifica_id_Equipo(int id_Ficha,int new_id_Equipo);
+    void modifica_id_Equipo(int new_id_Equipo);
 
-    void modifica_Pos(int id_Ficha,Pos new_Pos);
+    void modifica_Pos(int new_casilla);
 
-    void modifica_colocada(int id_Ficha,bool new_colocada);
+    void modifica_colocada(bool new_colocada);
 
-    void modifica_selecionada(int id_Ficha,bool new_selecionada);
+    void modifica_selecionada(bool new_selecionada);
 
     	       /*     Consultoras     */
 
@@ -45,7 +42,7 @@ public:
 
     int cid_Equipo() const;
 
-    Pos cpos() const;
+    int casillaFicha() const;
 
     bool ccolocada() const;
 
