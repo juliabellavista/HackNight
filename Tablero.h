@@ -16,10 +16,21 @@ private:
     vector<Casilla> tablero;
     int num_Fichas;
 
+    vector<vector<bool>> adjacents = {{false,true,false,true,true,false,false,false,false},
+                                        {true,false,true,true,true,true,false,false,false},
+                                        {false,true,false,false,true,true,false,false,false},
+                                        {true,true,false,false,true,false,true,true,false},
+                                        {true,true,true,true,false,true,true,true,true},
+                                        {false,true,true,false,true,false,false,true,true},
+                                        {false,false,false,true,true,false,false,true,false},
+                                        {false,false,false,true,true,true,true,false,true},
+                                        {false,false,false,false,true,true,false,true,false},
+                                        };
+
 public:
              /*     Constructoras     */
 
-    Tablero();
+    Tablero(int id, int n_Fichas);
 
     	       /*     Modificadoras     */
 
@@ -34,7 +45,11 @@ public:
 
     vector<bool> consultar_posFicha(int id_Ficha);
 
+    Casilla consultar_casilla(int id_Ficha);
+
     bool tres_en_ralla(vector<Ficha> fichas_jugador);
+
+
 
 
 
