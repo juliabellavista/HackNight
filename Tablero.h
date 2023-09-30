@@ -15,7 +15,10 @@ private:
     int id_Tablero;
     vector<Casilla> tablero;
     int num_Fichas;
-
+    struct Pos{
+        int x;
+        int y;
+    };
     vector<vector<bool>> adjacents = {{false,true,false,true,true,false,false,false,false},
                                         {true,false,true,true,true,true,false,false,false},
                                         {false,true,false,false,true,true,false,false,false},
@@ -26,7 +29,7 @@ private:
                                         {false,false,false,true,true,true,true,false,true},
                                         {false,false,false,false,true,true,false,true,false},
                                         };
-
+    vector<vector<int>> posiciones = {{0,1,2},{3,4,5},{6,7,8}};
 public:
              /*     Constructoras     */
 
@@ -34,7 +37,7 @@ public:
 
     	       /*     Modificadoras     */
 
-    void mover_ficha(Casilla vieja, Casilla nueva, int id_Ficha);
+    void mover_ficha(Casilla vieja, Pos nueva, int id_Ficha);
 
 
     	       /*     Consultoras     */
@@ -55,7 +58,7 @@ public:
 
 
 private:
-
+    
     
 };
 #endif
