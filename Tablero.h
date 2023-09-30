@@ -37,7 +37,7 @@ public:
 
     	       /*     Modificadoras     */
 
-    void mover_ficha(Casilla vieja, Pos nueva, int id_Ficha);
+    void mover_ficha(int vieja, int nueva, int id_Ficha);
 
 
     	       /*     Consultoras     */

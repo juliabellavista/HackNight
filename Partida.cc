@@ -30,7 +30,7 @@ void Partida::modifica_estat_partida(string new_estat_partida) {
 }
 
 void Partida::modifica_torn() {
-    if (torn = 0) torn = 1;
+    if (torn == 0) torn = 1;
     else torn = 0;
 }
 
@@ -42,7 +42,10 @@ void Partida::mover_ficha(int id_Ficha, int new_pos) {
     int old_pos = t.consultar_casilla(id_Ficha);
     if(moviments[new_pos]){
         t.mover_ficha(old_pos, new_pos, id_Ficha);
+        if(torn == 1) torn = 0;
+        else torn = 1;
     }
+   
 }
 
 void Partida::seleccionar_ficha(int id_Ficha){

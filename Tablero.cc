@@ -14,15 +14,15 @@ Tablero::Tablero(int id, int n_Fichas){
 
     
 
-    void Tablero::mover_ficha(Casilla vieja, Pos nueva, int id_Ficha){
+    void Tablero::mover_ficha(int vieja, int nueva, int id_Ficha){
         //mirar si hay alguien en la pos nueva
 
         //hay alguien
         
-        int id_casilla = posiciones[nueva.x][nueva.y];
-        Casilla nueva1=  tablero[id_casilla];
+        Casilla nueva1=  tablero[nueva];
+        Casilla vieja1=  tablero[vieja];
         if(nueva1.consultar_ocupada()){
-            vieja.modifica_id_Ocupant(nueva1.consultar_id_Ocupant());
+            vieja1.modifica_id_Ocupant(nueva1.consultar_id_Ocupant());
             nueva1.modifica_id_Ocupant(id_Ficha);
         }else{
             //no hay nadie

@@ -5,14 +5,14 @@
 using namespace std;
 
 void imprimir(){
-    for(int i= 0; i <9;++i){
-        cout << "x";
+    for(int i= 0; i < 9;++i){
+        cout << " x ";
         if(i % 3 != 0){
             cout << "|";
         }else{
             cout << endl;
             if(i != 9){
-               cout << "----" << endl;
+               cout << "----------" << endl;
             }
         
         }
@@ -74,6 +74,7 @@ void main(){
         }else if(arg =="acabar_partida"){
             //eliminar tablero
         }
+        cout << "---------" << endl;
     }
 
 }
