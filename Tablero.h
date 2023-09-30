@@ -45,7 +45,7 @@ public:
 
     vector<bool> consultar_posFicha(int id_Ficha);
 
-    Casilla consultar_casilla(int id_Ficha);
+    int consultar_casilla(int id_Ficha);
 
     bool tres_en_ralla(vector<Ficha> fichas_jugador);
 

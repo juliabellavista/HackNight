@@ -2,6 +2,7 @@
 #define PARTIDA_H
 
 #include "Partida.h"
+#include "Tablero.h"
 
 #ifndef NO_DIAGRAM	//No aparece en el diagrama
 #include <iostream>
@@ -28,12 +29,16 @@ private:
     int torn;
 
     int ficha_seleccionada;
+
+    Tablero t = Tablero(1, 6);
+
+    vector<bool> moviments;
     
 
 public:
              /*     Constructoras     */
 
-    Partida();
+    Partida(int id);
 
     	       /*     Modificadoras     */
 
@@ -45,15 +50,15 @@ public:
 
     void modifica_estat_partida(string new_estat_partida);
 
-    void modifica_torn(int id_Partida);
+    void modifica_torn();
 
     void modifica_ficha_seleccionada(int new_ficha_seleccionada);
 
-    void mover_ficha(int id_Taulell, int id_Ficha, int new_pos);
+    void mover_ficha(int id_Ficha, int new_pos);
 
-    void seleccionar_ficha(int id_Taulell, int id_Ficha);
+    void seleccionar_ficha(int id_Ficha);
 
-    void deseleccionar_ficha(int id_Taulell, int id_Ficha);
+    void deseleccionar_ficha();
 
 
     	       /*     Consultoras     */
@@ -72,7 +77,6 @@ public:
 
     int cficha_seleccionada() const;
 
-    bool existeix_ficha(int id_Ficha) const;
 private:
 
     
