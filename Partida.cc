@@ -42,8 +42,7 @@ void Partida::mover_ficha(int id_Ficha, int new_pos) {
     int old_pos = t.consultar_casilla(id_Ficha);
     if(moviments[new_pos]){
         t.mover_ficha(old_pos, new_pos, id_Ficha);
-        if(torn == 1) torn = 0;
-        else torn = 1;
+        modifica_torn();
     }
    
 }
