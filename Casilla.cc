@@ -8,7 +8,7 @@ Casilla::Casilla(int id) {
 }
 
 void Casilla::modifica_ocupada() {
-    ocupada = not ocupada;
+    ocupada = !ocupada;
 }
 
 void Casilla::modifica_id_Ocupant(int new_id_Ocupant) {
