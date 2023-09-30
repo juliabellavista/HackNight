@@ -3,13 +3,6 @@
 Tablero::Tablero(int id, int n_Fichas){
     id_Tablero = id;
     num_Fichas = n_Fichas;
-    vector<Casilla> c (9);
-    for(int i = 0; i <9; ++i){
-        Casilla a(i);
-        c[i] = a;
-        
-    }
-    tablero = c;
 }
 
     
@@ -48,20 +41,23 @@ Tablero::Tablero(int id, int n_Fichas){
         return adjacents[id_casilla];
     }
 
-    vector<bool> Tablero::consultar_posFicha(int id_Ficha){
-
-    }
+    /*
 
     bool Tablero::tres_en_ralla(vector<Ficha> fichas_jugador){
 
     }
-
+    */
     int Tablero::consultar_casilla(int id_Ficha){
         for(int i= 0; i< 9; ++i){
             if(id_Ficha == tablero[i].consultar_id_Casilla()){
                 return i;
             }
         }
+        return -1;
+    }
+
+    int Tablero::cjugador(int casella) const{
+        return tablero[casella].consultar_id_Ocupant();
     }
 
 

@@ -77,6 +77,8 @@ public:
 
     int cficha_seleccionada() const;
 
+    int cjugador(int casella) const;
+
 private:
 
     

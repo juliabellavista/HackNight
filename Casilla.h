@@ -21,7 +21,7 @@ private:
 
     int id_Ocupant;
 
-    bool SuperPower;
+   // bool SuperPower;
     
 
 public:
@@ -35,7 +35,7 @@ public:
 
     void modifica_id_Ocupant(int new_id_Ocupant);
 
-    void modifica_SuperPower();
+    //void modifica_SuperPower();
 
     	       /*     Consultoras     */
 
@@ -45,7 +45,7 @@ public:
 
     int consultar_id_Ocupant() const;
 
-    bool consultar_SuperPower() const;
+    //bool consultar_SuperPower() const;
   
 };
 #endif

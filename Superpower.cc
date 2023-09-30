@@ -1,29 +1,29 @@
 #include "Superpower.h"
 
-SuperPower::Superpower(int id,Pos posiciones,vector<bool> posibles) {
-    id_SuperPower =id;
+Superpower::Superpower(int id,Pos posiciones,vector<bool> posibles) {
+    id_Superpower =id;
     pos = posiciones;
     posibles_movimientos = posibles;
 }
 
 
 
-int SuperPower::cid_SuperPower() const{
-    return id_SuperPower;
+int Superpower::cid_Superpower() const{
+    return id_Superpower;
 }
 
-Pos SuperPower::cpos()const{
+Pos Superpower::cpos()const{
     return pos;
 }
 
-vector<bool> SuperPower::cposibles_movimientos() const{
+vector<bool> Superpower::cposibles_movimientos() const{
     return posibles_movimientos;
 }
     
-void SuperPower::modifica_Pos(Pos new_Pos){
+void Superpower::modifica_Pos(Pos new_Pos){
     pos = new_pos;
 }
 
-void SuperPower::modifica_posibles_movimientos(vector<bool> new_posibles_movimientos()){
+void Superpower::modifica_posibles_movimientos(vector<bool> new_posibles_movimientos()){
     posibles_movimientos = new_posibles_movimientos;
 }

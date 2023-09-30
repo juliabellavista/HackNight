@@ -13,7 +13,7 @@ class Tablero {
 
 private:
     int id_Tablero;
-    vector<Casilla> tablero;
+    vector<Casilla> tablero = {Casilla(0), Casilla(1), Casilla(2), Casilla(3), Casilla(4), Casilla(5), Casilla(6), Casilla(7), Casilla(8)};
     int num_Fichas;
     struct Pos{
         int x;
@@ -46,14 +46,14 @@ public:
 
     vector<bool> calcular_moviments(int id_Ficha);
 
-    vector<bool> consultar_posFicha(int id_Ficha);
+   
 
     int consultar_casilla(int id_Ficha);
 
-    bool tres_en_ralla(vector<Ficha> fichas_jugador);
+    //bool tres_en_ralla(vector<Ficha> fichas_jugador);
 
 
-
+    int cjugador(int casella) const;
 
 
 

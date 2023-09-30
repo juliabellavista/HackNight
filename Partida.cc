@@ -47,6 +47,11 @@ void Partida::mover_ficha(int id_Ficha, int new_pos) {
    
 }
 
+int Partida::cjugador(int casella) const{
+    return t.cjugador(casella);
+
+}
+
 void Partida::seleccionar_ficha(int id_Ficha){
     ficha_seleccionada = id_Ficha;
     moviments = t.calcular_moviments(id_Ficha);

@@ -4,9 +4,12 @@
 
 using namespace std;
 
-void imprimir(){
-    for(int i= 0; i < 9;++i){
-        cout << " x ";
+void imprimir(Partida p){
+    for(int i= 1; i < 10;++i){
+        if( p.cjugador(i-1)== 0)cout << " x ";
+        else if (p.cjugador(i-1)==1) cout << " o ";
+        else cout << "   ";
+        
         if(i % 3 != 0){
             cout << "|";
         }else{
@@ -20,11 +23,11 @@ void imprimir(){
     }
 
 }
-void main(){
+int main(){
 
     string arg;
     Partida joc = Partida(1);
-    imprimir();
+    imprimir(joc);
     while(cin >> arg){
 
         if(arg =="selecionar_ficha"){ //id_ficha selecionada
@@ -44,8 +47,6 @@ void main(){
             cin >> id_ficha;
             //comprobar que id_ficha existe
 
-                int taulell = joc.cid_Taulell();
-                int id_ficha;
                 int pos_mover;
                 cin >> pos_mover;
                 joc.mover_ficha(id_ficha,pos_mover);
@@ -64,7 +65,7 @@ void main(){
             cin >> id_ficha;
             //comprobar que id_ficha existe
 
-                int taulell = joc.cid_Taulell();
+                //int taulell = joc.cid_Taulell();
                 joc.deseleccionar_ficha();
                 //quitar la ficha de dnd esta
                 //poner ficha nueva posicion
