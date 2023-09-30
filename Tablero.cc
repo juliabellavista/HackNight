@@ -56,10 +56,10 @@ Tablero::Tablero(int id, int n_Fichas){
 
     }
 
-    Casilla Tablero::consultar_casilla(int id_Ficha){
+    int Tablero::consultar_casilla(int id_Ficha){
         for(int i= 0; i< 9; ++i){
             if(id_Ficha == tablero[i].consultar_id_Casilla()){
-                return tablero[i];
+                return i;
             }
         }
     }

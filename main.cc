@@ -23,8 +23,8 @@ void imprimir(){
 void main(){
 
     string arg;
-    Partida joc;
-
+    Partida joc = Partida(1);
+    imprimir();
     while(cin >> arg){
 
         if(arg =="selecionar_ficha"){ //id_ficha selecionada
@@ -32,8 +32,7 @@ void main(){
             cin >> id_ficha;
             //comprobar que id_ficha existe
                 //calcular posibles posiciones
-                int taulell = joc.cid_Taulell();
-                joc.seleccionar_ficha(taulell,id_ficha);
+                joc.seleccionar_ficha(id_ficha);
                 //imprimir posibles posiciones
 
             
@@ -49,7 +48,7 @@ void main(){
                 int id_ficha;
                 int pos_mover;
                 cin >> pos_mover;
-                joc.mover_ficha(taulell,id_ficha,pos_mover);
+                joc.mover_ficha(id_ficha,pos_mover);
                 //quitar la ficha de dnd esta
                 //poner ficha nueva posicion
                 //quitar ficha antigua posicion
@@ -66,7 +65,7 @@ void main(){
             //comprobar que id_ficha existe
 
                 int taulell = joc.cid_Taulell();
-                joc.deseleccionar_ficha(taulell,id_ficha);
+                joc.deseleccionar_ficha();
                 //quitar la ficha de dnd esta
                 //poner ficha nueva posicion
                 //quitar ficha antigua posicion
