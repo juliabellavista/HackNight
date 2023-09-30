@@ -4,6 +4,22 @@
 
 using namespace std;
 
+void imprimir(){
+    for(int i= 0; i <9;++i){
+        cout << "x";
+        if(i % 3 != 0){
+            cout << "|";
+        }else{
+            cout << endl;
+            if(i != 9){
+               cout << "----" << endl;
+            }
+        
+        }
+        
+    }
+
+}
 void main(){
 
     string arg;
@@ -15,14 +31,11 @@ void main(){
             int id_ficha;
             cin >> id_ficha;
             //comprobar que id_ficha existe
-            if(joc.existeix_ficha(id_ficha)){
                 //calcular posibles posiciones
                 int taulell = joc.cid_Taulell();
                 joc.seleccionar_ficha(taulell,id_ficha);
                 //imprimir posibles posiciones
-            }else{
-                cout << "la ficha no existe" << endl;
-            }
+
             
 
 
@@ -31,7 +44,7 @@ void main(){
             int id_ficha;
             cin >> id_ficha;
             //comprobar que id_ficha existe
-            if(joc.existeix_ficha(id_ficha)){
+
                 int taulell = joc.cid_Taulell();
                 int id_ficha;
                 int pos_mover;
@@ -41,9 +54,7 @@ void main(){
                 //poner ficha nueva posicion
                 //quitar ficha antigua posicion
                 //colocar ficha_antigua nueva posicion
-            }else{
-                cout << "la ficha no existe" << endl;
-            }
+           
             
 
         }else if(arg =="deselecionar_ficha"){//id_ficha
@@ -53,16 +64,14 @@ void main(){
             int id_ficha;
             cin >> id_ficha;
             //comprobar que id_ficha existe
-            if(joc.existeix_ficha(id_ficha)){
+
                 int taulell = joc.cid_Taulell();
                 joc.deseleccionar_ficha(taulell,id_ficha);
                 //quitar la ficha de dnd esta
                 //poner ficha nueva posicion
                 //quitar ficha antigua posicion
                 //colocar ficha_antigua nueva posicion
-            }else{
-                cout << "la ficha no existe" << endl;
-            }
+           
         }else if(arg =="acabar_partida"){
             //eliminar tablero
         }
